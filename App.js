@@ -3,10 +3,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import StartScreen from './screens/StartScreen';
 import StartInstruct from './screens/StartInstruct';
 import { Navigation } from './screens/Navigation';
+import React from 'react';
+
 
 export default function App() {
+  const [firstTime, setFitstTime] = React.useState(true)
   return (
-   <Navigation/>
+  <Navigation firstTime={firstTime} setFitstTime={setFitstTime}/>
   );
 }
 
