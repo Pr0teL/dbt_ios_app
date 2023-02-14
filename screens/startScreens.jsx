@@ -2,7 +2,7 @@ import StartInstruct from './StartInstruct';
 import { Linking, Text, TouchableOpacity, View, StyleSheet, Image} from 'react-native';
 import { FlatList, TextInput } from 'react-native-gesture-handler';
 import Aura from '../components/Aura';
-import { useRoute } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
@@ -130,10 +130,18 @@ export const StartInstruct_4 = ({ navigation }) => {
     )
 }
 
-export const StartInstruct_5 = ({ navigation }) => {
-    const route = useRoute();
-    const setFirstTime = route.params;
-    console.log(setFirstTime)
+export const StartInstruct_5 = ({ navigation, setFirstTime }) => {
+    console.log(setFirstTime);
+
+
+const storeData = async (key, value) => {
+  try {
+    await AsyncStorage.setItem(key, value);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
     return (
         <View style={styles.container}>
             <Aura/>
@@ -143,7 +151,10 @@ export const StartInstruct_5 = ({ navigation }) => {
             <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "10%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => navigation.navigate("Instruct_5")}>
                 <Text style={{ fontSize: "24px", fontWeight: "600", textAlign: "center", }}>Заполнить план безопасности</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "15%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => setFirstTime()}>
+            <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "15%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => {
+                storeData("firstTime", "false")
+                setFirstTime(false)
+                }}>
                 <Text style={{ fontSize: "24px", fontWeight: "600", textAlign: "center", }}>Продолжить</Text>
             </TouchableOpacity>
             <Image style={{ marginTop: "auto"}} source={require('../assets/StartSelectPlant.png')} />

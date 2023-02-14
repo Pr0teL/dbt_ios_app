@@ -7,9 +7,8 @@ import React from 'react';
 
 
 export default function App() {
-  const [firstTime, setFitstTime] = React.useState(true)
   return (
-  <Navigation firstTime={firstTime} setFitstTime={setFitstTime}/>
+  <Navigation/>
   );
 }
 
