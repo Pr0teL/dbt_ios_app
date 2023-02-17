@@ -5,6 +5,7 @@ import { StartInstruct_1, StartInstruct_2, StartInstruct_3, StartInstruct_4, Sta
 import { MenuScreen } from './MenuScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
+import { HelpPlan } from './HelpPlan';
 
 
 const Stack = createStackNavigator();
@@ -37,6 +38,7 @@ export const Navigation = () => {
             firstTime === false && 
                 <Stack.Navigator>
                     <Stack.Screen name="Menu" component={MenuScreen} options={{ headerShown: false }} />
+                    <Stack.Screen name="HelpPlan" component={HelpPlan} options={{ headerShown: false }} />
                 </Stack.Navigator>
             }
         </NavigationContainer>

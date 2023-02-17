@@ -19,12 +19,13 @@ export const DefConatiner = ({ navigation, content }) => {
         useNativeDriver: true,
       }).start();
     };
+
     return (
        <>
-       <SideBar isSidebarOpen={isOpen} toggleSidebar={toggleSidebar} sidebarAnimation={sidebarAnimation}/>
+       <SideBar navigation={navigation} isSidebarOpen={isOpen} toggleSidebar={toggleSidebar} sidebarAnimation={sidebarAnimation}/>
         <View style={{
             flex: 1,
-            backgroundColor: '#fff',
+            backgroundColor: '#e6e6e6',
             alignItems: 'center',
             paddingTop: "20%"
         }}>
@@ -32,7 +33,7 @@ export const DefConatiner = ({ navigation, content }) => {
                 <TouchableOpacity onPress={toggleSidebar} style={{}}>
                     <Image style={{}} source={require('../assets/Union.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("Start")} style={{}}>
+                <TouchableOpacity onPress={() => navigation.navigate("HelpPlan")} style={{}}>
                     <Image style={{}} source={require('../assets/Search.png')} />
                 </TouchableOpacity>
             </View>

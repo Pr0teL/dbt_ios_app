@@ -2,8 +2,7 @@ import { Text, TouchableOpacity, View, Image, StyleSheet, Animated } from 'react
 import React from 'react';
 
 
-export default function SideBar({isSidebarOpen, toggleSidebar, sidebarAnimation}) {
-    console.log(sidebarAnimation);
+export default function SideBar({isSidebarOpen, toggleSidebar, sidebarAnimation, navigation}) {
 
 
     let styles = StyleSheet.create({
@@ -30,10 +29,16 @@ export default function SideBar({isSidebarOpen, toggleSidebar, sidebarAnimation}
                 <TouchableOpacity style={{}}>
                     <Text style={{ fontSize: "20px", color: "#D1D1D1", fontWeight: "600",marginLeft: "5%", marginBottom: "20%" }}>Профиль</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{}}>
+                <TouchableOpacity style={{}} onPress={() =>{ 
+                    toggleSidebar()
+                    return navigation.navigate("Menu")
+                    }}>
                     <Text style={{ fontSize: "20px", color: "#D1D1D1", fontWeight: "600",marginLeft: "5%", marginBottom: "20%" }}>Главная страница</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{}}>
+                <TouchableOpacity style={{}} onPress={() =>{ 
+                    toggleSidebar()
+                    return navigation.navigate("HelpPlan")
+                    }}>
                     <Text style={{ fontSize: "20px", color: "#D1D1D1", fontWeight: "600",marginLeft: "5%", marginBottom: "20%" }}>План безопасности</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{}}>

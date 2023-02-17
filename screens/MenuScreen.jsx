@@ -18,7 +18,7 @@ const clearAsyncStorage = async () => {
 
 export const MenuScreen = ({ navigation }) => {
   return (
-    <DefConatiner content={
+    <DefConatiner navigation={navigation} content={
       <>
         <MotivationBtn />
         <Image style={{}} source={require('../assets/DanceMenu.png')} />

@@ -148,7 +148,11 @@ const storeData = async (key, value) => {
             <TouchableOpacity onPress={() => navigation.navigate("Instruct_4")} style={{ width: "90%", marginBottom: "25%" }}>
                 <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "10%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => navigation.navigate("Instruct_5")}>
+            <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "10%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => {
+                storeData("firstTime", "false")
+                setFirstTime(false)
+                navigation.navigate("HelpPlan")
+                }}>
                 <Text style={{ fontSize: "24px", fontWeight: "600", textAlign: "center", }}>Заполнить план безопасности</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "15%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => {
