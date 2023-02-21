@@ -6,6 +6,7 @@ import { MenuScreen } from './MenuScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
 import { HelpPlan } from './HelpPlan';
+import { ProfileScreen } from './ProfileScreen';
 
 
 const Stack = createStackNavigator();
@@ -15,13 +16,13 @@ export const Navigation = () => {
     const [firstTime, setFirstTime] = React.useState(true)
 
         React.useEffect(() => {
-            const checkFerstTime = async () => {
+            const checkFirstTime = async () => {
               const value = await AsyncStorage.getItem('firstTime');
               if (value !== null) {
                 setFirstTime(false);
               }
             };
-            checkFerstTime();
+            checkFirstTime();
           }, []);
 
     return (
@@ -39,6 +40,7 @@ export const Navigation = () => {
                 <Stack.Navigator>
                     <Stack.Screen name="Menu" component={MenuScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="HelpPlan" component={HelpPlan} options={{ headerShown: false }} />
+                    <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
                 </Stack.Navigator>
             }
         </NavigationContainer>

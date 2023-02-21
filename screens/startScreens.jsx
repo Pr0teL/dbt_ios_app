@@ -151,7 +151,7 @@ const storeData = async (key, value) => {
             <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "10%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => {
                 storeData("firstTime", "false")
                 setFirstTime(false)
-                navigation.navigate("HelpPlan")
+                setTimeout(() => navigation.navigate("HelpPlan"), 0)
                 }}>
                 <Text style={{ fontSize: "24px", fontWeight: "600", textAlign: "center", }}>Заполнить план безопасности</Text>
             </TouchableOpacity>
@@ -161,7 +161,7 @@ const storeData = async (key, value) => {
                 }}>
                 <Text style={{ fontSize: "24px", fontWeight: "600", textAlign: "center", }}>Продолжить</Text>
             </TouchableOpacity>
-            <Image style={{ marginTop: "auto"}} source={require('../assets/StartSelectPlant.png')} />
+            <Image style={{ marginTop: "auto"}} source={require('../assets/StartSelectImg.png')} />
         </View>
     )
 }

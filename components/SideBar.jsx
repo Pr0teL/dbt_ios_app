@@ -26,7 +26,10 @@ export default function SideBar({isSidebarOpen, toggleSidebar, sidebarAnimation,
             }
             <Animated.View style={[styles.sidebar, { transform: [{ translateX: sidebarAnimation }] }]}>
                 <Image style={{marginBottom: "25%"}} source={require('../assets/UnionBg.png')} />
-                <TouchableOpacity style={{}}>
+                <TouchableOpacity style={{}} onPress={() =>{ 
+                    toggleSidebar()
+                    return navigation.navigate("Profile")
+                    }}>
                     <Text style={{ fontSize: "20px", color: "#D1D1D1", fontWeight: "600",marginLeft: "5%", marginBottom: "20%" }}>Профиль</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{}} onPress={() =>{ 
