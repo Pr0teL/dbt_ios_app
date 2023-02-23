@@ -22,7 +22,11 @@ export const StartInstruct_1 = ({ navigation }) => {
             }
             progress={'30%'} aura={false} content={
                 <>
-                    <Text style={{ fontSize: "16px", textAlign: "center", width: "90%" }}>С  Приложением вы можете отслеживать своё настроение, тренировать навыки ДБТ и помогать самому себе в критических ситуациях!</Text>
+                    <Text style={{ fontSize: "16px", textAlign: "center", width: "90%",marginBottom: "10%" }}>С  Приложением вы можете отслеживать своё настроение, тренировать навыки ДБТ и помогать самому себе в критических ситуациях!</Text>
+                    <View style={{flexDirection: "row",justifyContent: "space-between", width: "90%"}}>
+                    <Image style={{ marginTop: "auto"}} source={require('../assets/sadGirl.png')} />
+                    <Image style={{ marginTop: "auto"}} source={require('../assets/loveGirl.png')} />
+                    </View>
                     <Text style={{ fontSize: "13px", marginTop: "87%", textAlign: "center", width: "98%", fontWeight: "300" }}>Нажав кнопку Понятно, вы соглашаетест с Условиями Предоставления Услуг и Политикой Конфиденциальности</Text>
                 </>
             } />
@@ -45,6 +49,7 @@ export const StartInstruct_2 = ({ navigation }) => {
                 <>
                     <Text style={{ fontSize: "16px", textAlign: "center", width: "90%", marginBottom: "5%" }}>Мы используем техники диалектико-поведенческой терапии, чтобы помочь тебе справииться с проблемами и поддержать, когда ты в этом нуждаешься.</Text>
                     <TextInput placeholder="Enter text" style={{ backgroundColor: "#FFF", width: "80%", fontSize: "20px", padding: "2%" }} />
+                    <Image style={{ marginTop: "auto"}} source={require('../assets/girlHeadphones.png')} />
                 </>
             } />
     )
@@ -97,6 +102,7 @@ export const StartInstruct_3 = ({ navigation }) => {
                         textDecorationStyle: "solid",
                         textDecorationColor: "#000"
                     }}>Центр Эмпатия</Text></TouchableOpacity>
+                    <Image style={{height: 300}} source={require('../assets/musicGirl.png')} />
 
                 </>
             } />
