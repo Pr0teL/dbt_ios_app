@@ -7,6 +7,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
 import { HelpPlan } from './HelpPlan';
 import { ProfileScreen } from './ProfileScreen';
+import { Crisis_1 } from './crisisScreens';
+import { Mindfulness_1 } from './mindfulnessScreens';
+import { Emotions_1 } from './emotionsScreens';
+import { Articles_1 } from './articlesScreens';
+import { Skills_1 } from './skillsScreens';
 
 
 const Stack = createStackNavigator();
@@ -41,6 +46,11 @@ export const Navigation = () => {
                     <Stack.Screen name="Menu" component={MenuScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="HelpPlan" component={HelpPlan} options={{ headerShown: false }} />
                     <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
+                    <Stack.Screen name="Crisis_1" component={Crisis_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_1" component={Mindfulness_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_1" component={Emotions_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Articles_1" component={Articles_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Skills_1" component={Skills_1} options={{ headerShown: false }} />
                 </Stack.Navigator>
             }
         </NavigationContainer>

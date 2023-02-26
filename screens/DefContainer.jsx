@@ -71,19 +71,19 @@ export const DefConatiner = ({ navigation, content, name}) => {
             <Aura/>
             {content}
             <View style={{alignItems: "center", marginTop: "auto" ,marginBottom: "10%",  width: "90%",  flexDirection: "row", justifyContent: "space-between"}}>
-            <TouchableOpacity onPress={() => navigation.navigate("Start")} style={{}}>
+            <TouchableOpacity onPress={() => navigation.navigate("Crisis_1")} style={{}}>
                     <Text>КРИЗИС</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("Start")} style={{}}>
+                <TouchableOpacity onPress={() => navigation.navigate("Mindfulness_1")} style={{}}>
                     <Image style={{}} source={require('../assets/Eye.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("Start")} style={{}}>
+                <TouchableOpacity onPress={() => navigation.navigate("Emotions_1")} style={{}}>
                     <Image style={{}} source={require('../assets/Smile_reverse.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("Start")} style={{}}>
+                <TouchableOpacity onPress={() => navigation.navigate("Skills_1")} style={{}}>
                     <Image style={{}} source={require('../assets/Friends.png')} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("Start")} style={{}}>
+                <TouchableOpacity onPress={() => navigation.navigate("Articles_1")} style={{}}>
                 <Text>СТАТЬИ</Text>
                 </TouchableOpacity>
             </View>

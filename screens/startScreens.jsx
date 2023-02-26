@@ -1,5 +1,5 @@
 import StartInstruct from './StartInstruct';
-import { Linking, Text, TouchableOpacity, View, StyleSheet, Image} from 'react-native';
+import { Linking, Text, TouchableOpacity, View, StyleSheet, Image } from 'react-native';
 import { FlatList, TextInput } from 'react-native-gesture-handler';
 import Aura from '../components/Aura';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -10,7 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const StartInstruct_1 = ({ navigation }) => {
     return (
-        <StartInstruct title={'Учись осознанности вместе с....'} navBack={
+        <StartInstruct title={'«Мне кажется,\n я не справляюсь»...'} navBack={
             <TouchableOpacity onPress={() => navigation.navigate("Start")} style={{ width: "90%", marginBottom: "5%" }}>
                 <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
             </TouchableOpacity>
@@ -22,12 +22,12 @@ export const StartInstruct_1 = ({ navigation }) => {
             }
             progress={'30%'} aura={false} content={
                 <>
-                    <Text style={{ fontSize: "16px", textAlign: "center", width: "90%",marginBottom: "10%" }}>С  Приложением вы можете отслеживать своё настроение, тренировать навыки ДБТ и помогать самому себе в критических ситуациях!</Text>
-                    <View style={{flexDirection: "row",justifyContent: "space-between", width: "90%"}}>
-                    <Image style={{ marginTop: "auto"}} source={require('../assets/sadGirl.png')} />
-                    <Image style={{ marginTop: "auto"}} source={require('../assets/loveGirl.png')} />
+                    <Text style={{ fontSize: "16px", textAlign: "center", width: "90%", marginBottom: "10%" }}>Это нормально. Здесь ты научишься справляться: отслеживать своё настроение и помогать себе в критических ситуациях.</Text>
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", width: "90%", marginBottom: "27%" }}>
+                        <Image style={{ marginTop: "auto" }} source={require('../assets/sadGirl.png')} />
+                        <Image style={{ marginTop: "auto" }} source={require('../assets/loveGirl.png')} />
                     </View>
-                    <Text style={{ fontSize: "13px", marginTop: "87%", textAlign: "center", width: "98%", fontWeight: "300" }}>Нажав кнопку Понятно, вы соглашаетест с Условиями Предоставления Услуг и Политикой Конфиденциальности</Text>
+                    <Text style={{ fontSize: "13px", textAlign: "center", width: "98%", fontWeight: "300" }}>Нажав кнопку Понятно, вы соглашаетест с Условиями Предоставления Услуг и Политикой Конфиденциальности</Text>
                 </>
             } />
     )
@@ -35,7 +35,7 @@ export const StartInstruct_1 = ({ navigation }) => {
 
 export const StartInstruct_2 = ({ navigation }) => {
     return (
-        <StartInstruct title={'Ты знаешь, что такое ДБТ?'} navBack={
+        <StartInstruct title={'Как мне научиться справляться?'} navBack={
             <TouchableOpacity onPress={() => navigation.navigate("Instruct_1")} style={{ width: "90%", marginBottom: "5%" }}>
                 <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
             </TouchableOpacity>
@@ -47,9 +47,9 @@ export const StartInstruct_2 = ({ navigation }) => {
             }
             progress={'50%'} aura={true} content={
                 <>
-                    <Text style={{ fontSize: "16px", textAlign: "center", width: "90%", marginBottom: "5%" }}>Мы используем техники диалектико-поведенческой терапии, чтобы помочь тебе справииться с проблемами и поддержать, когда ты в этом нуждаешься.</Text>
+                    <Text style={{ fontSize: "16px", textAlign: "center", width: "90%", marginBottom: "5%" }}>Мы научим тебя техникам диалектико-поведенческой терапии. Они помогут найти силы даже в отчаянные моменты. Тебе знаком подход ДБТ?</Text>
                     <TextInput placeholder="Enter text" style={{ backgroundColor: "#FFF", width: "80%", fontSize: "20px", padding: "2%" }} />
-                    <Image style={{ marginTop: "auto"}} source={require('../assets/girlHeadphones.png')} />
+                    <Image style={{ marginTop: "auto" }} source={require('../assets/girlHeadphones.png')} />
                 </>
             } />
     )
@@ -57,7 +57,7 @@ export const StartInstruct_2 = ({ navigation }) => {
 
 export const StartInstruct_3 = ({ navigation }) => {
     return (
-        <StartInstruct title={'Зачем мне это?'} navBack={
+        <StartInstruct title={'Мне это подойдёт?'} navBack={
             <TouchableOpacity onPress={() => navigation.navigate("Instruct_2")} style={{ width: "90%", marginBottom: "5%" }}>
                 <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
             </TouchableOpacity>
@@ -69,13 +69,12 @@ export const StartInstruct_3 = ({ navigation }) => {
             }
             progress={'70%'} aura={true} content={
                 <>
-                    <Text style={{ fontSize: "16px", textAlign: "center", width: "90%", marginBottom: "10%" }}>Это Приложение предназначено для людей,
-                        у которых диагнастировано ПРЛ, для врачей/терапевтов. {"\n"}
+                    <Text style={{ fontSize: "16px", textAlign: "center", width: "90%", marginBottom: "10%" }}>Мы помогаем людям справляться с тяжелыми состояниями: пограничным расстройством личности, депрессией, тревожным расстройством и не только.  {"\n"}
                         {"\n"}
-                        Данное приложение не заменяет личную и групповую терапию.
+                        <Text style={{fontWeight: "600"}}>Приложение не заменяет терапию.</Text>
                         {"\n"}
                         {"\n"}
-                        Найти себе ДБТ терапевта можно вот здесь
+                        Найти ДБТ терапевта можно здесь:
                     </Text>
                     <TouchableOpacity onPress={() => Linking.openURL('http://www.dbtrussia.org/welcome/')}><Text
                         style={{
@@ -102,7 +101,7 @@ export const StartInstruct_3 = ({ navigation }) => {
                         textDecorationStyle: "solid",
                         textDecorationColor: "#000"
                     }}>Центр Эмпатия</Text></TouchableOpacity>
-                    <Image style={{height: 300}} source={require('../assets/musicGirl.png')} />
+                    <Image style={{ height: 300 }} source={require('../assets/musicGirl.png')} />
 
                 </>
             } />
@@ -125,7 +124,7 @@ export const StartInstruct_4 = ({ navigation }) => {
             progress={'90%'} aura={true} content={
                 <>
                     <Text style={{ fontSize: "20px", width: "90%", lineHeight: "30px", fontWeight: "500", marginBottom: "10%" }}>
-                        Навыки можно разделить на три уровня стресса:
+                    Выбирай навык в зависимости от уровня стресса:
                     </Text>
                     <Text style={{ fontSize: "20px", width: "75%", lineHeight: "30px", marginBottom: "5%" }}>• 70 и выше - навыки стрессоустойчивости</Text>
                     <Text style={{ fontSize: "20px", width: "75%", lineHeight: "30px", marginBottom: "5%" }}>• 30-70 - навыки {'\n'} эмоциональной регуляции</Text>
@@ -137,37 +136,36 @@ export const StartInstruct_4 = ({ navigation }) => {
 }
 
 export const StartInstruct_5 = ({ navigation, setFirstTime }) => {
-    console.log(setFirstTime);
 
 
-const storeData = async (key, value) => {
-  try {
-    await AsyncStorage.setItem(key, value);
-  } catch (error) {
-    console.error(error);
-  }
-};
+    const storeData = async (key, value) => {
+        try {
+            await AsyncStorage.setItem(key, value);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
         <View style={styles.container}>
-            <Aura/>
+            <Aura />
             <TouchableOpacity onPress={() => navigation.navigate("Instruct_4")} style={{ width: "90%", marginBottom: "25%" }}>
                 <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "10%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => {
+            <TouchableOpacity style={{ width: "85%", zIndex: "2", borderRadius: "15px", height: "10%", marginBottom: "10%", backgroundColor: "#9CABF2", justifyContent: 'center', }} onPress={() => {
                 storeData("firstTime", "false")
                 setFirstTime(false)
                 setTimeout(() => navigation.navigate("HelpPlan"), 0)
-                }}>
+            }}>
                 <Text style={{ fontSize: "24px", fontWeight: "600", textAlign: "center", }}>Заполнить план безопасности</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{ width: "85%", borderRadius: "15px", height: "10%", marginBottom: "15%", backgroundColor: "#9CABF2", justifyContent: 'center',  }} onPress={() => {
+            <TouchableOpacity style={{ width: "85%", zIndex: "2", borderRadius: "15px", height: "10%", marginBottom: "15%", backgroundColor: "#9CABF2", justifyContent: 'center', }} onPress={() => {
                 storeData("firstTime", "false")
                 setFirstTime(false)
-                }}>
-                <Text style={{ fontSize: "24px", fontWeight: "600", textAlign: "center", }}>Продолжить</Text>
+            }}>
+                <Text style={{ fontSize: "24px", fontWeight: "600", textAlign: "center", }}>Заполню позже</Text>
             </TouchableOpacity>
-            <Image style={{ marginTop: "auto"}} source={require('../assets/StartSelectImg.png')} />
+            <Image style={{ marginTop: "auto" }} source={require('../assets/StartSelectImg.png')} />
         </View>
     )
 }
