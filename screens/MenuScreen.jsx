@@ -6,6 +6,8 @@ import { DefConatiner } from './DefContainer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import MotivationBtn from '../components/MotivationBtn';
 import SideBar from '../components/SideBar';
+import { SvgXml } from 'react-native-svg';
+import LayWorkingGirlSvg from '../assets/LayWorkingGirlSvg';
 
 const clearAsyncStorage = async () => {
   try {
@@ -17,13 +19,12 @@ const clearAsyncStorage = async () => {
 }
 
 
-
 export const MenuScreen = ({ navigation }) => {
   return (
     <DefConatiner navigation={navigation} content={
       <>
         <MotivationBtn />
-        <Image style={{}} source={require('../assets/LayWorkImg.png')} />
+        <SvgXml xml={LayWorkingGirlSvg} />
       </>
     } />
   )

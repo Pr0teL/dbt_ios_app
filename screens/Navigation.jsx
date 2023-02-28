@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import StartScreen from './StartScreen';
-import { StartInstruct_1, StartInstruct_2, StartInstruct_3, StartInstruct_4, StartInstruct_5 } from './startScreens';
+import { StartInstruct_1, StartInstruct_2, StartInstruct_3, StartInstruct_4, StartInstruct_5, StartInstruct_6 } from './startScreens';
 import { MenuScreen } from './MenuScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
@@ -38,7 +38,8 @@ export const Navigation = () => {
                 <Stack.Screen name="Instruct_2" component={StartInstruct_2} options={{ headerShown: false }} />
                 <Stack.Screen name="Instruct_3" component={StartInstruct_3} options={{ headerShown: false }} />
                 <Stack.Screen name="Instruct_4" component={StartInstruct_4} options={{ headerShown: false }} />
-                <Stack.Screen name="Instruct_5"  options={{ headerShown: false }}>{props => <StartInstruct_5 {...props} setFirstTime={(a) => setFirstTime(a)}/>}</Stack.Screen>
+                <Stack.Screen name="Instruct_5" component={StartInstruct_5} options={{ headerShown: false }} />
+                <Stack.Screen name="Instruct_6"  options={{ headerShown: false }}>{props => <StartInstruct_6 {...props} setFirstTime={(a) => setFirstTime(a)}/>}</Stack.Screen>
             </Stack.Navigator>}
             {
             firstTime === false && 

@@ -4,7 +4,9 @@ import Aura from '../components/Aura';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DefConatiner } from './DefContainer';
 import React from 'react';
-
+import { SvgXml } from 'react-native-svg';
+import EmotionsSvg from '../assets/EmotionsSvg';
+import DepressedGirlSvg from '../assets/DepressedGirlSvg';
 
 
 
@@ -15,7 +17,7 @@ export const Emotions_1 = ({ navigation }) => {
         <DefConatiner navigation={navigation} content={
             <>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/Emotions.png')} />
+                    <SvgXml xml={EmotionsSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", textAlign: "center" }}>Навыки
                         эмоциональной регуляции
                     </Text>
@@ -34,7 +36,7 @@ export const Emotions_1 = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate("Menu")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "4%" }}>
                         <Text style={{ fontSize: "18px" }}>ЗАБОТА</Text>
                     </TouchableOpacity>
-                    <Image style={{}} source={require('../assets/DepressGirl.png')} />
+                    <SvgXml xml={DepressedGirlSvg} />
                 </ScrollView>
             </>
         } />

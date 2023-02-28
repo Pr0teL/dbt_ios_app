@@ -5,6 +5,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DefConatiner } from './DefContainer';
 import React from 'react';
 import { useFocusEffect } from '@react-navigation/native';
+import { SvgXml } from 'react-native-svg';
+import ThunderSvg from '../assets/ThunderSvg';
 
 
 
@@ -63,7 +65,7 @@ export const Crisis_1 = ({ navigation }) => {
         <DefConatiner navigation={navigation} content={
             <>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%" }}>Стрессоустойчивость</Text>
                     <TouchableOpacity onPress={() => navigation.navigate("Crisis_Stop")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
                         <Text style={{ fontSize: "18px" }}>СТОП</Text>
@@ -102,12 +104,12 @@ export const Crisis_Stop = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>СТОП</Text>
-                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{fontWeight: "700"}}>C</Text> — стой. Замри на месте.</Text>
-                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{fontWeight: "700"}}>Т</Text> — только шаг назад, мысленно или физически.</Text>
-                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{fontWeight: "700"}}>О</Text> — осмотрись, наблюдай за происходящим вокруг.</Text>
-                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{fontWeight: "700"}}>П</Text> — попробуй действовать осознанно.</Text>
+                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{ fontWeight: "700" }}>C</Text> — стой. Замри на месте.</Text>
+                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{ fontWeight: "700" }}>Т</Text> — только шаг назад, мысленно или физически.</Text>
+                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{ fontWeight: "700" }}>О</Text> — осмотрись, наблюдай за происходящим вокруг.</Text>
+                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{ fontWeight: "700" }}>П</Text> — попробуй действовать осознанно.</Text>
                 </ScrollView>
             </>
         } />
@@ -123,12 +125,12 @@ export const Crisis_Trud = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>ТРУД</Text>
-                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{fontWeight: "700"}}>Т</Text> — температура. Умойся ледяной водой или окуни лицо в холодную воду и задержи дыхание на 20-30 секунд. </Text>
-                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{fontWeight: "700"}}>Р</Text> — расслабление мышц. По очереди напрягай каждую часть тела на пару секунд, а потом расслабляй. Видео. </Text>
-                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{fontWeight: "700"}}>У</Text> — упражнения. Сделай физические упражнения, которые тебе нравятся: быстрая ходьба, приседания или отжимания. </Text>
-                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{fontWeight: "700"}}>Д</Text> — дыхание. Дыши глубоко и медленно. Наблюдай как воздух наполняет легкие . </Text>
+                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{ fontWeight: "700" }}>Т</Text> — температура. Умойся ледяной водой или окуни лицо в холодную воду и задержи дыхание на 20-30 секунд. </Text>
+                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{ fontWeight: "700" }}>Р</Text> — расслабление мышц. По очереди напрягай каждую часть тела на пару секунд, а потом расслабляй. Видео. </Text>
+                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{ fontWeight: "700" }}>У</Text> — упражнения. Сделай физические упражнения, которые тебе нравятся: быстрая ходьба, приседания или отжимания. </Text>
+                    <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}><Text style={{ fontWeight: "700" }}>Д</Text> — дыхание. Дыши глубоко и медленно. Наблюдай как воздух наполняет легкие . </Text>
                 </ScrollView>
             </>
         } />
@@ -144,7 +146,7 @@ export const Crisis_Otvlech = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>НАВЫКИ ОТВЛЕЧЕНИЯ</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Используй органы чувств: зрение, слух, обоняние, вкус и осязание. Например, рассоси кубик сахара, понюхай свечку, послушай любимую песню. </Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Перенаправь мысли и чувства в своё хобби. </Text>
@@ -165,7 +167,7 @@ export const Crisis_Moment = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>УЛУЧШИТЬ МОМЕНТ</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• «Я смогу», «Я справлюсь с этим».</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Начни заниматься йогой.</Text>
@@ -189,28 +191,28 @@ export const Crisis_Razum = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600", textAlign: "center" }}>ПЕРЕЖИТь с мудрым разумом</Text>
-                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_1")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%"}}>
-                        <Text style={{ fontSize: "18px" }}><Text style={{fontWeight: "700"}}>П</Text>омоги кому-то</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_1")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
+                        <Text style={{ fontSize: "18px" }}><Text style={{ fontWeight: "700" }}>П</Text>омоги кому-то</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_2")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%"}}>
-                        <Text style={{ fontSize: "18px" }}><Text style={{fontWeight: "700"}}>Е</Text>сли сравнить</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_2")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
+                        <Text style={{ fontSize: "18px" }}><Text style={{ fontWeight: "700" }}>Е</Text>сли сравнить</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_3")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
-                        <Text style={{ fontSize: "18px" }}>Используйте <Text style={{fontWeight: "700"}}>Р</Text>азные эмоции</Text>
+                        <Text style={{ fontSize: "18px" }}>Используйте <Text style={{ fontWeight: "700" }}>Р</Text>азные эмоции</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_4")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
-                        <Text style={{ fontSize: "18px" }}><Text style={{fontWeight: "700"}}>Е</Text>сть другие действия</Text>
+                        <Text style={{ fontSize: "18px" }}><Text style={{ fontWeight: "700" }}>Е</Text>сть другие действия</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_5")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%"}}>
-                        <Text style={{ fontSize: "18px" }}>Построй <Text style={{fontWeight: "700"}}>Ж</Text>елезную стену</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_5")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
+                        <Text style={{ fontSize: "18px" }}>Построй <Text style={{ fontWeight: "700" }}>Ж</Text>елезную стену</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_6")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%"}}>
-                        <Text style={{ fontSize: "18px" }}><Text style={{fontWeight: "700"}}>И</Text>спользуй ощущения</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_6")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
+                        <Text style={{ fontSize: "18px" }}><Text style={{ fontWeight: "700" }}>И</Text>спользуй ощущения</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_7")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%"}}>
-                        <Text style={{ fontSize: "18px" }}>Перенаправь <Text style={{fontWeight: "700"}}>Т</Text>ечение мыслей</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum_7")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
+                        <Text style={{ fontSize: "18px" }}>Перенаправь <Text style={{ fontWeight: "700" }}>Т</Text>ечение мыслей</Text>
                     </TouchableOpacity>
                 </ScrollView>
             </>
@@ -227,7 +229,7 @@ export const Crisis_Razum_1 = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>Помоги кому-то</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Найди волонтерскую работу.</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Помоги другу или члену семьи. Например, разговором или совместной уборкой.</Text>
@@ -249,7 +251,7 @@ export const Crisis_Razum_2 = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>Если сравнить</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Сравни свои состояния: как ты чувствуешь себя сейчас и как было в другое время?</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Подумай о тех, кто тоже справляется с трудностями.</Text>
@@ -271,7 +273,7 @@ export const Crisis_Razum_3 = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>Используй Разные эмоции</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Читай эмоциональные книги и истории. Фанфикшн тоже подходит!</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Смотри эмоциональные фильмы и сериалы. Например: «Собачья жизнь», «Виноваты звезды» и т. д. Создай свой список.</Text>
@@ -292,7 +294,7 @@ export const Crisis_Razum_4 = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>Есть другие действия</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Сосредоточься на задаче, которую нужно выполнить. Например, на домашнем задании или проекте.</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Сделай уборку.</Text>
@@ -316,7 +318,7 @@ export const Crisis_Razum_5 = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>Построй Железную стену</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Отстранись от ситуации, оставь ее на некоторое время.</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Мысленно отпусти ситуацию.</Text>
@@ -338,7 +340,7 @@ export const Crisis_Razum_6 = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600" }}>Используй ощущения</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Сожми в руке рельефный резиновый мячик.</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Слушай очень громкую музыку.</Text>
@@ -361,7 +363,7 @@ export const Crisis_Razum_7 = ({ navigation }) => {
                     <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
                 </TouchableOpacity>
                 <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
-                    <Image style={{}} source={require('../assets/crisis.png')} />
+                    <SvgXml xml={ThunderSvg} />
                     <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600", textAlign: "center" }}>Перенаправь течение мыслей</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Посчитай что-то. Например, цвета на картине или книги на полке. Можно просто посчитать до 10.</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Напой слова любимой песни. Если любимой нет, можно взять известную песню Queen. </Text>
