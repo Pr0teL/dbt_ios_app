@@ -49,7 +49,7 @@ export const ProfileScreen = ({ navigation }) => {
                     <Text style={{fontSize: "18px", fontWeight: "600", marginRight: "5%"}}>Имя/ник |</Text>
                     <TextInput value={profileData.name} onChangeText={(text) => setProfileData({...profileData, name: text})} onEndEditing={() => saveData()} placeholder='Введите имя' style={{fontSize: "20px", fontWeight: "500", flex: 1}}></TextInput>
                 </View>
-                <View style={{ width: "90%"}}>
+                <View style={{ width: "90%", marginBottom: "27%"}}>
                     <Text style={{fontSize: "18px", fontWeight: "600", marginRight: "5%", marginBottom: "4%", }}>Напоминание: зачем мне это?</Text>
                     <TextInput value={profileData.reminder} onChangeText={(text) => setProfileData({...profileData, reminder: text})} onEndEditing={() => saveData()} placeholder='Введите напоминание' style={{fontSize: "20px", fontWeight: "500", borderWidth: "1px", padding: "2%", borderRadius: "5px"}}></TextInput>
                 </View>

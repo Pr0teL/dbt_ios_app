@@ -69,30 +69,30 @@ export const HelpPlan = ({ navigation }) => {
                     <Text style={{ fontSize: "30px", width: "100%", fontWeight: "800", marginBottom: "2%" }}>план безопасности</Text>
                     <Text style={{ fontSize: "14px", fontWeight: "500", lineHeight: "18px", marginBottom: "5%", textAlign: "center" }}>Сигналы (мысли, триггеры,ситуации и т.д.), предупреждающие о приблежении кризиса:</Text>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "2%" }}>
-                        <TextInput value={data.signal_1} onChangeText={(text) => setData({ ...data, signal_1: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
-                        <TextInput value={data.signal_2} onChangeText={(text) => setData({ ...data, signal_2: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.signal_1} onChangeText={(text) => setData({ ...data, signal_1: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.signal_2} onChangeText={(text) => setData({ ...data, signal_2: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "4%" }}>
-                        <TextInput value={data.signal_3} onChangeText={(text) => setData({ ...data, signal_3: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
-                        <TextInput value={data.signal_4} onChangeText={(text) => setData({ ...data, signal_4: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.signal_3} onChangeText={(text) => setData({ ...data, signal_3: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.signal_4} onChangeText={(text) => setData({ ...data, signal_4: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <Text style={{ fontSize: "14px", fontWeight: "500", lineHeight: "18px", marginBottom: "4%", textAlign: "center" }}>Внутренняя стратегия, что я могу сделать, чтобы отвлечься от проблемы не прибегая к помощи человека:</Text>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "2%" }}>
-                        <TextInput value={data.strat_1} onChangeText={(text) => setData({ ...data, strat_1: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
-                        <TextInput value={data.strat_2} onChangeText={(text) => setData({ ...data, strat_2: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.strat_1} onChangeText={(text) => setData({ ...data, strat_1: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.strat_2} onChangeText={(text) => setData({ ...data, strat_2: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "2%" }}>
-                        <TextInput value={data.strat_3} onChangeText={(text) => setData({ ...data, strat_3: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
-                        <TextInput value={data.strat_4} onChangeText={(text) => setData({ ...data, strat_4: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.strat_3} onChangeText={(text) => setData({ ...data, strat_3: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.strat_4} onChangeText={(text) => setData({ ...data, strat_4: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <Text style={{ fontSize: "14px", fontWeight: "500", lineHeight: "18px", marginBottom: "3%", textAlign: "center" }}>Люди, которых я могу попросить о помощи:</Text>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "2%" }}>
-                        <TextInput value={data.help_1} onChangeText={(text) => setData({ ...data, help_1: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
-                        <TextInput value={data.help_2} onChangeText={(text) => setData({ ...data, help_2: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.help_1} onChangeText={(text) => setData({ ...data, help_1: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.help_2} onChangeText={(text) => setData({ ...data, help_2: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "5%" }}>
-                        <TextInput value={data.help_3} onChangeText={(text) => setData({ ...data, help_3: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
-                        <TextInput value={data.help_4} onChangeText={(text) => setData({ ...data, help_4: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.help_3} onChangeText={(text) => setData({ ...data, help_3: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.help_4} onChangeText={(text) => setData({ ...data, help_4: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <Text style={{ fontSize: "14px", fontWeight: "500", lineHeight: "18px", marginBottom: "2%", textAlign: "center" }}>Специалисты и организации, с которыми я могу связаться в случае<Text style={{ color: "#D20505" }}> кризиса</Text>:</Text>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "5%" }}>
@@ -101,7 +101,7 @@ export const HelpPlan = ({ navigation }) => {
                                 Имя специалиста:
                             </Text>
                         </View>
-                        <TextInput value={data.spec_name} onChangeText={(text) => setData({ ...data, spec_name: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.spec_name} onChangeText={(text) => setData({ ...data, spec_name: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "5%" }}>
                         <View style={{ backgroundColor: "#FFF", alignItems: "center", justifyContent: "center", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} >
@@ -109,7 +109,7 @@ export const HelpPlan = ({ navigation }) => {
                                 <Text style={{ fontSize: "16px", fontWeight: "600" }}>Номер телефона:</Text>
                             </TouchableOpacity>
                         </View>
-                        <TextInput value={data.spec_tel_1} onChangeText={(text) => setData({ ...data, spec_tel_1: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.spec_tel_1} onChangeText={(text) => setData({ ...data, spec_tel_1: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "5%" }}>
                         <View style={{ backgroundColor: "#FFF", alignItems: "center", justifyContent: "center", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} >
@@ -117,7 +117,7 @@ export const HelpPlan = ({ navigation }) => {
                                 <Text style={{ fontSize: "15px", fontWeight: "600" }}>Номер телефона:</Text>
                             </TouchableOpacity>
                         </View>
-                        <TextInput value={data.spec_tel_2} onChangeText={(text) => setData({ ...data, spec_tel_2: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} />
+                        <TextInput value={data.spec_tel_2} onChangeText={(text) => setData({ ...data, spec_tel_2: text })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "48%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
                     </View>
                     <View style={{ width: "100%", marginLeft: "3%", flexDirection: "row", justifyContent: "space-between", marginBottom: "5%" }}>
                         <View style={{ backgroundColor: "#FFF", alignItems: "center", justifyContent: "center", width: "100%", fontSize: "20px", borderRadius: "6px", padding: "2%" }} >

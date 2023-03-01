@@ -1,6 +1,5 @@
-import { Linking, Text, TouchableOpacity, View, StyleSheet, Image, ScrollView, Alert } from 'react-native';
-import { FlatList, TextInput } from 'react-native-gesture-handler';
-import Aura from '../components/Aura';
+import { Linking, Text, TouchableOpacity, View, ScrollView, Alert } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DefConatiner } from './DefContainer';
 import React from 'react';
@@ -82,7 +81,7 @@ export const Crisis_1 = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate("Crisis_Razum")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "3%" }}>
                         <Text style={{ fontSize: "18px" }}>ПЕРЕЖИТЬ С МУДРЫМ РАЗУМОМ</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate("Menu")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "4%" }}>
+                    <TouchableOpacity onPress={() => navigation.navigate("Crisis_ZaProtiv")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "4%" }}>
                         <Text style={{ fontSize: "18px" }}>«ЗА» и «ПРОТИВ»</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => handleCallPress(data)} style={{ backgroundColor: "#FFFFFF", padding: "3%", borderRadius: "6px" }}>
@@ -370,6 +369,149 @@ export const Crisis_Razum_7 = ({ navigation }) => {
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Собери пазл или нарисуй картинку. Можно рисовать картины по номерам.</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Посмотри телевизор или почитай. Например, «Гарри Поттер» поможет вернуть волшебство в твою жизнь.</Text>
                     <Text style={{ fontSize: "18px", marginBottom: "5%", width: "90%" }}>• Посмотри любимый музыкальный клип.</Text>
+                </ScrollView>
+            </>
+        } />
+    )
+}
+
+export const Crisis_ZaProtiv = ({ navigation }) => {
+
+    React.useEffect(() => {
+        const loadData = async () => {
+            try {
+                const dataJson = await AsyncStorage.getItem('CrisisData');
+                if (dataJson !== null) {
+                    const savedData = JSON.parse(dataJson);
+                    setData(savedData);
+                }
+            } catch (error) {
+                console.log(`Error loading data: ${error}`);
+            }
+        };
+
+        loadData();
+    }, []);
+
+
+
+    const [data, setData] = React.useState({
+        tabl_1: {
+            name: "",
+            za_1: "",
+            za_2: "",
+            za_3: "",
+            za_4: "",
+            protiv_1: "",
+            protiv_2: "",
+            protiv_3: "",
+            protiv_4: ""
+        },
+        tabl_2: {
+            name: "",
+            za_1: "",
+            za_2: "",
+            za_3: "",
+            za_4: "",
+            protiv_1: "",
+            protiv_2: "",
+            protiv_3: "",
+            protiv_4: ""
+        }
+    });
+
+    const saveData = async () => {
+        try {
+            const dataJson = JSON.stringify(data);
+            await AsyncStorage.setItem('CrisisData', dataJson);
+            console.log('Data saved successfully');
+        } catch (error) {
+            console.log(`Error saving data: ${error}`);
+        }
+    };
+
+    return (
+        <DefConatiner navigation={navigation} content={
+            <>
+                <TouchableOpacity onPress={() => navigation.navigate("Crisis_1")} style={{ width: "90%", marginBottom: "5%" }}>
+                    <Text style={{ fontSize: "17px" }}>❮ Назад</Text>
+                </TouchableOpacity>
+                <ScrollView contentContainerStyle={{ alignItems: "center" }} style={{ width: "90%" }}>
+                    <SvgXml xml={ThunderSvg} width={180} height={190} />
+                    <Text style={{ fontSize: "24px", marginBottom: "5%", fontWeight: "600", textAlign: "center" }}>ЗА И ПРОТИВ</Text>
+                    <View style={{ width: '100%' }}>
+                        <View style={{ width: "100%", marginBottom: "10%" }}>
+                            <View style={{ width: "100%", flexDirection: 'row', alignItems: "center", justifyContent: "space-between", borderBottomWidth: "1px", paddingBottom: "3%" }}>
+                                <TextInput value={data.tabl_1.name} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, name: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "35%", fontSize: "16px", borderRadius: "6px", padding: "1%" }} />
+                                <Text style={{ fontSize: "24px" }}>ЗА</Text>
+                                <Text style={{ fontSize: "24px" }}>ПРОТИВ</Text>
+                            </View>
+                            <View style={{ width: "100%", flexDirection: "row" }}>
+                                <View style={{ width: "35%", borderRightWidth: "1px", paddingRight: "2%", paddingTop: "5%" }}>
+                                    <Text style={{ fontSize: "15px", textAlign: "center", marginBottom: "20%" }}>Поддаться{'\n'} эмоциям</Text>
+                                    <Text style={{ fontSize: "15px", textAlign: "center" }}>Противостоять{'\n'} эмоциям</Text>
+                                </View>
+                                <View style={{ width: "32%", paddingTop: "3%" }}>
+                                    <View style={{ marginBottom: "7%" }}>
+                                        <View style={{ marginLeft: "5%", flexDirection: "row", marginBottom: "5%" }}>
+                                            <TextInput value={data.tabl_1.za_1} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, za_1: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%", marginRight: '5%' }} />
+                                            <TextInput value={data.tabl_1.protiv_1} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, protiv_1: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                                        </View>
+                                        <View style={{ marginLeft: "5%", flexDirection: "row", marginBottom: "5%" }}>
+                                            <TextInput value={data.tabl_1.za_2} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, za_2: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%", marginRight: '5%' }} />
+                                            <TextInput value={data.tabl_1.protiv_2} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, protiv_2: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                                        </View>
+                                    </View>
+                                    <View>
+                                        <View style={{ marginLeft: "5%", flexDirection: "row", marginBottom: "5%" }}>
+                                            <TextInput value={data.tabl_1.za_3} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, za_3: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%", marginRight: '5%' }} />
+                                            <TextInput value={data.tabl_1.protiv_3} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, protiv_3: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                                        </View>
+                                        <View style={{ marginLeft: "5%", flexDirection: "row", marginBottom: "5%" }}>
+                                            <TextInput value={data.tabl_1.za_4} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, za_4: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%", marginRight: '5%' }} />
+                                            <TextInput value={data.tabl_1.protiv_4} onChangeText={(text) => setData({ ...data, tabl_1: { ...data.tabl_1, protiv_4: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                                        </View>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={{ width: "100%", marginBottom: "10%" }}>
+                            <View style={{ width: "100%", flexDirection: 'row', alignItems: "center", justifyContent: "space-between", borderBottomWidth: "1px", paddingBottom: "3%" }}>
+                                <TextInput value={data.tabl_2.name} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, name: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "35%", fontSize: "16px", borderRadius: "6px", padding: "1%" }} />
+                                <Text style={{ fontSize: "24px" }}>ЗА</Text>
+                                <Text style={{ fontSize: "24px" }}>ПРОТИВ</Text>
+                            </View>
+                            <View style={{ width: "100%", flexDirection: "row" }}>
+                                <View style={{ width: "35%", borderRightWidth: "1px", paddingRight: "2%", paddingTop: "5%" }}>
+                                    <Text style={{ fontSize: "15px", textAlign: "center", marginBottom: "20%" }}>Поддаться{'\n'} эмоциям</Text>
+                                    <Text style={{ fontSize: "15px", textAlign: "center" }}>Противостоять{'\n'} эмоциям</Text>
+                                </View>
+                                <View style={{ width: "32%", paddingTop: "3%" }}>
+                                    <View style={{ marginBottom: "7%" }}>
+                                        <View style={{ marginLeft: "5%", flexDirection: "row", marginBottom: "5%" }}>
+                                            <TextInput value={data.tabl_2.za_1} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, za_1: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%", marginRight: '5%' }} />
+                                            <TextInput value={data.tabl_2.protiv_1} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, protiv_1: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                                        </View>
+                                        <View style={{ marginLeft: "5%", flexDirection: "row", marginBottom: "5%" }}>
+                                            <TextInput value={data.tabl_2.za_2} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, za_2: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%", marginRight: '5%' }} />
+                                            <TextInput value={data.tabl_2.protiv_2} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, protiv_2: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                                        </View>
+                                    </View>
+                                    <View>
+                                        <View style={{ marginLeft: "5%", flexDirection: "row", marginBottom: "5%" }}>
+                                            <TextInput value={data.tabl_2.za_3} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, za_3: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%", marginRight: '5%' }} />
+                                            <TextInput value={data.tabl_2.protiv_3} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, protiv_3: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                                        </View>
+                                        <View style={{ marginLeft: "5%", flexDirection: "row", marginBottom: "5%" }}>
+                                            <TextInput value={data.tabl_2.za_4} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, za_4: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%", marginRight: '5%' }} />
+                                            <TextInput value={data.tabl_2.protiv_4} onChangeText={(text) => setData({ ...data, tabl_2: { ...data.tabl_2, protiv_4: text } })} onEndEditing={() => saveData()} style={{ backgroundColor: "#FFF", width: "100%", fontSize: "16px", borderRadius: "6px", padding: "2%" }} />
+                                        </View>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                    </View>
+
                 </ScrollView>
             </>
         } />

@@ -7,11 +7,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
 import { HelpPlan } from './HelpPlan';
 import { ProfileScreen } from './ProfileScreen';
-import { Crisis_1, Crisis_Stop, Crisis_Trud, Crisis_Otvlech, Crisis_Moment, Crisis_Razum, Crisis_Razum_1, Crisis_Razum_2, Crisis_Razum_3, Crisis_Razum_4, Crisis_Razum_5, Crisis_Razum_6, Crisis_Razum_7 } from './crisisScreens';
+import { Crisis_1, Crisis_Stop, Crisis_Trud, Crisis_Otvlech, Crisis_Moment, Crisis_Razum, Crisis_Razum_1, Crisis_Razum_2, Crisis_Razum_3, Crisis_Razum_4, Crisis_Razum_5, Crisis_Razum_6, Crisis_Razum_7, Crisis_ZaProtiv } from './crisisScreens';
 import { Mindfulness_1 } from './mindfulnessScreens';
 import { Emotions_1 } from './emotionsScreens';
-import { Articles_1 } from './articlesScreens';
-import { Skills_1 } from './skillsScreens';
+import { Articles_1, Articles_BioSoc, Articles_DBT, Articles_Mission, Articles_PRL } from './articlesScreens';
+import { Skills_1, Skills_Chest, Skills_Drug, Skills_Poprosi, Skills_Valid } from './skillsScreens';
 import { HelpScreen } from './HelpScreen';
 
 
@@ -63,11 +63,23 @@ export const Navigation = () => {
                     <Stack.Screen name="Crisis_Razum_5" component={Crisis_Razum_5} options={{ headerShown: false }} />
                     <Stack.Screen name="Crisis_Razum_6" component={Crisis_Razum_6} options={{ headerShown: false }} />
                     <Stack.Screen name="Crisis_Razum_7" component={Crisis_Razum_7} options={{ headerShown: false }} />
+                    <Stack.Screen name="Crisis_ZaProtiv" component={Crisis_ZaProtiv} options={{ headerShown: false }} />
 
                     <Stack.Screen name="Mindfulness_1" component={Mindfulness_1} options={{ headerShown: false }} />
+
                     <Stack.Screen name="Emotions_1" component={Emotions_1} options={{ headerShown: false }} />
+
                     <Stack.Screen name="Articles_1" component={Articles_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Articles_DBT" component={Articles_DBT} options={{ headerShown: false }} />
+                    <Stack.Screen name="Articles_BioSoc" component={Articles_BioSoc} options={{ headerShown: false }} />
+                    <Stack.Screen name="Articles_Mission" component={Articles_Mission} options={{ headerShown: false }} />
+                    <Stack.Screen name="Articles_PRL" component={Articles_PRL} options={{ headerShown: false }} />
+
                     <Stack.Screen name="Skills_1" component={Skills_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Skills_Drug" component={Skills_Drug} options={{ headerShown: false }} />
+                    <Stack.Screen name="Skills_Poprosi" component={Skills_Poprosi} options={{ headerShown: false }} />
+                    <Stack.Screen name="Skills_Chest" component={Skills_Chest} options={{ headerShown: false }} />
+                    <Stack.Screen name="Skills_Valid" component={Skills_Valid} options={{ headerShown: false }} />
                 </Stack.Navigator>
             }
         </NavigationContainer>
