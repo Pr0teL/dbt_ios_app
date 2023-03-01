@@ -6,7 +6,6 @@ import { DefConatiner } from './DefContainer';
 import React from 'react';
 import { SvgXml } from 'react-native-svg';
 import EmotionsSvg from '../assets/EmotionsSvg';
-import DepressedGirlSvg from '../assets/DepressedGirlSvg';
 
 
 
@@ -36,7 +35,7 @@ export const Emotions_1 = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate("Menu")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "4%" }}>
                         <Text style={{ fontSize: "18px" }}>ЗАБОТА</Text>
                     </TouchableOpacity>
-                    <SvgXml xml={DepressedGirlSvg} />
+                    <Image resizeMode="contain" style={{width: 200, height: 250}} source={require('../assets/DepressedGirl.png')} />
                 </ScrollView>
             </>
         } />

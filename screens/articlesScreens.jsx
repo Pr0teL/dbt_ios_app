@@ -3,7 +3,6 @@ import { FlatList, TextInput } from 'react-native-gesture-handler';
 import { DefConatiner } from './DefContainer';
 import React from 'react';
 import { SvgXml } from 'react-native-svg';
-import ReadingGirlSvg from '../assets/ReadingGirlSvg';
 
 
 
@@ -31,7 +30,7 @@ export const Articles_1 = ({ navigation }) => {
                             <Text style={{ fontSize: "40px", textAlign: "center", fontWeight: "500" }}>Что такое ПРЛ</Text>
                         </TouchableOpacity>
                     </View>
-                    <SvgXml xml={ReadingGirlSvg} />
+                    <Image resizeMode="contain" style={{width: 350, height: 250}} source={require('../assets/ReadingGirl.png')} />
                 </ScrollView>
             </>
         } />

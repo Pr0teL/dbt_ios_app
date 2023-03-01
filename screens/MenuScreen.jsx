@@ -1,13 +1,7 @@
-import StartInstruct from './StartInstruct';
-import { Linking, Text, TouchableOpacity, View, StyleSheet, Image } from 'react-native';
-import { FlatList, TextInput } from 'react-native-gesture-handler';
-import Aura from '../components/Aura';
+import { Image } from 'react-native';
 import { DefConatiner } from './DefContainer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import MotivationBtn from '../components/MotivationBtn';
-import SideBar from '../components/SideBar';
-import { SvgXml } from 'react-native-svg';
-import LayWorkingGirlSvg from '../assets/LayWorkingGirlSvg';
 
 const clearAsyncStorage = async () => {
   try {
@@ -24,7 +18,7 @@ export const MenuScreen = ({ navigation }) => {
     <DefConatiner navigation={navigation} content={
       <>
         <MotivationBtn />
-        <SvgXml xml={LayWorkingGirlSvg} />
+        <Image resizeMode="contain" style={{ width: 350, height: 400 }} source={require('../assets/LayWorkingGirl.png')} />
       </>
     } />
   )

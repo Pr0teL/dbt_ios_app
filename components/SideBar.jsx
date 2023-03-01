@@ -48,10 +48,16 @@ export default function SideBar({ isSidebarOpen, toggleSidebar, sidebarAnimation
                 }}>
                     <Text style={{ fontSize: "20px", color: "#000", fontWeight: "600", marginLeft: "5%", marginBottom: "10%" }}>План безопасности</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{borderBottomWidth: "2px", borderBottomColor: "#D9D9DA", width: "90%", marginBottom: "10%"}}>
+                <TouchableOpacity onPress={() => {
+                    toggleSidebar()
+                    return navigation.navigate("Menu")
+                }} style={{borderBottomWidth: "2px", borderBottomColor: "#D9D9DA", width: "90%", marginBottom: "10%"}}>
                     <Text style={{ fontSize: "20px", color: "#000", fontWeight: "600", marginLeft: "5%", marginBottom: "10%" }}>Настройки</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{borderBottomWidth: "2px", borderBottomColor: "#D9D9DA", width: "90%", marginBottom: "10%"}}>
+                <TouchableOpacity onPress={() => {
+                    toggleSidebar()
+                    return navigation.navigate("HelpScreen")
+                }} style={{borderBottomWidth: "2px", borderBottomColor: "#D9D9DA", width: "90%", marginBottom: "10%"}}>
                     <Text style={{ fontSize: "20px", color: "#000", fontWeight: "600", marginLeft: "5%", marginBottom: "10%" }}>Помощь</Text>
                 </TouchableOpacity>
             </Animated.View>

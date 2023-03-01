@@ -6,7 +6,6 @@ import { DefConatiner } from './DefContainer';
 import React from 'react';
 import FriendsSvg from '../assets/FriendsSvg';
 import { SvgXml } from 'react-native-svg';
-import CatGirlSvg from '../assets/CatGirlSvg';
 
 
 
@@ -32,7 +31,7 @@ export const Skills_1 = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate("Menu")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "4%" }}>
                         <Text style={{ fontSize: "18px" }}>Валидация</Text>
                     </TouchableOpacity>
-                    <SvgXml xml={CatGirlSvg} />
+                    <Image resizeMode="contain" style={{width: 300, height: 350}} source={require('../assets/CatGirl.png')} />
                 </ScrollView>
             </>
         } />

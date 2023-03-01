@@ -6,7 +6,6 @@ import { DefConatiner } from './DefContainer';
 import React from 'react';
 import EyeSvg from '../assets/EyeSvg';
 import { SvgXml } from 'react-native-svg';
-import DzenSvg from '../assets/DzenSvg';
 
 
 
@@ -29,7 +28,7 @@ export const Mindfulness_1 = ({ navigation }) => {
                     <TouchableOpacity onPress={() => navigation.navigate("Menu")} style={{ width: "100%", borderBottomWidth: "2px", paddingBottom: "2%", marginBottom: "4%" }}>
                         <Text style={{ fontSize: "18px" }}>Навыки осознанности «Как»</Text>
                     </TouchableOpacity>
-                    <SvgXml xml={DzenSvg}/>
+                    <Image resizeMode="contain" style={{width: 270, height: 400}} source={require('../assets/DzenGirl.png')} />
                 </ScrollView>
             </>
         } />

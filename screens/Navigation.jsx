@@ -12,6 +12,7 @@ import { Mindfulness_1 } from './mindfulnessScreens';
 import { Emotions_1 } from './emotionsScreens';
 import { Articles_1 } from './articlesScreens';
 import { Skills_1 } from './skillsScreens';
+import { HelpScreen } from './HelpScreen';
 
 
 const Stack = createStackNavigator();
@@ -47,6 +48,7 @@ export const Navigation = () => {
                     <Stack.Screen name="Menu" component={MenuScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="HelpPlan" component={HelpPlan} options={{ headerShown: false }} />
                     <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
+                    <Stack.Screen name="HelpScreen" component={HelpScreen} options={{ headerShown: false }} />
 
                     <Stack.Screen name="Crisis_1" component={Crisis_1} options={{ headerShown: false }} />
                     <Stack.Screen name="Crisis_Stop" component={Crisis_Stop} options={{ headerShown: false }} />
