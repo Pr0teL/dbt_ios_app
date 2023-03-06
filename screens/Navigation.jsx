@@ -9,7 +9,7 @@ import { HelpPlan } from './HelpPlan';
 import { ProfileScreen } from './ProfileScreen';
 import { Crisis_1, Crisis_Stop, Crisis_Trud, Crisis_Otvlech, Crisis_Moment, Crisis_Razum, Crisis_Razum_1, Crisis_Razum_2, Crisis_Razum_3, Crisis_Razum_4, Crisis_Razum_5, Crisis_Razum_6, Crisis_Razum_7, Crisis_ZaProtiv } from './crisisScreens';
 import { Mindfulness_1 } from './mindfulnessScreens';
-import { Emotions_1 } from './emotionsScreens';
+import { Emotions_1, Emotions_ABC, Emotions_ABC_1, Emotions_ABC_2, Emotions_ABC_3, Emotions_Action, Emotions_Facts, Emotions_Solution, Emotions_Zabota } from './emotionsScreens';
 import { Articles_1, Articles_BioSoc, Articles_DBT, Articles_Mission, Articles_PRL } from './articlesScreens';
 import { Skills_1, Skills_Chest, Skills_Drug, Skills_Poprosi, Skills_Valid } from './skillsScreens';
 import { HelpScreen } from './HelpScreen';
@@ -68,6 +68,14 @@ export const Navigation = () => {
                     <Stack.Screen name="Mindfulness_1" component={Mindfulness_1} options={{ headerShown: false }} />
 
                     <Stack.Screen name="Emotions_1" component={Emotions_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_Facts" component={Emotions_Facts} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_Action" component={Emotions_Action} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_Solution" component={Emotions_Solution} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_ABC" component={Emotions_ABC} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_ABC_1" component={Emotions_ABC_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_ABC_2" component={Emotions_ABC_2} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_ABC_3" component={Emotions_ABC_3} options={{ headerShown: false }} />
+                    <Stack.Screen name="Emotions_Zabota" component={Emotions_Zabota} options={{ headerShown: false }} />
 
                     <Stack.Screen name="Articles_1" component={Articles_1} options={{ headerShown: false }} />
                     <Stack.Screen name="Articles_DBT" component={Articles_DBT} options={{ headerShown: false }} />
