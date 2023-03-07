@@ -42,6 +42,7 @@ export const DefConatiner = ({ navigation, content, name }) => {
     useFocusEffect(
         React.useCallback(() => {
             handleName()
+            
         }, [])
     );
 

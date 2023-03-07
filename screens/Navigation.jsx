@@ -8,7 +8,7 @@ import React from 'react';
 import { HelpPlan } from './HelpPlan';
 import { ProfileScreen } from './ProfileScreen';
 import { Crisis_1, Crisis_Stop, Crisis_Trud, Crisis_Otvlech, Crisis_Moment, Crisis_Razum, Crisis_Razum_1, Crisis_Razum_2, Crisis_Razum_3, Crisis_Razum_4, Crisis_Razum_5, Crisis_Razum_6, Crisis_Razum_7, Crisis_ZaProtiv } from './crisisScreens';
-import { Mindfulness_1 } from './mindfulnessScreens';
+import { Mindfulness_1, Mindfulness_Razum, Mindfulness_Razum_1, Mindfulness_Razum_2, Mindfulness_Razum_3, Mindfulness_Razum_4, Mindfulness_Razum_5, Mindfulness_Razum_6, Mindfulness_Razum_7, Mindfulness_Skills_Chto, Mindfulness_Skills_Chto_Seen, Mindfulness_Skills_Chto_Seen_1, Mindfulness_Skills_Chto_Seen_2, Mindfulness_Skills_Chto_Seen_3, Mindfulness_Skills_Chto_Seen_4, Mindfulness_Skills_Chto_Seen_5, Mindfulness_Skills_Chto_Seen_6, Mindfulness_Skills_Chto_Seen_7, Mindfulness_Skills_Chto_Seen_8, Mindfulness_Skills_Descript, Mindfulness_Skills_Descript_1, Mindfulness_Skills_Descript_2, Mindfulness_Skills_Descript_3, Mindfulness_Skills_Kak, Mindfulness_Skills_Kak_1, Mindfulness_Skills_Kak_2, Mindfulness_Skills_Kak_3, Mindfulness_Skills_Participation } from './mindfulnessScreens';
 import { Emotions_1, Emotions_ABC, Emotions_ABC_1, Emotions_ABC_2, Emotions_ABC_3, Emotions_Action, Emotions_Facts, Emotions_Solution, Emotions_Zabota } from './emotionsScreens';
 import { Articles_1, Articles_BioSoc, Articles_DBT, Articles_Mission, Articles_PRL } from './articlesScreens';
 import { Skills_1, Skills_Chest, Skills_Drug, Skills_Poprosi, Skills_Valid } from './skillsScreens';
@@ -66,6 +66,33 @@ export const Navigation = () => {
                     <Stack.Screen name="Crisis_ZaProtiv" component={Crisis_ZaProtiv} options={{ headerShown: false }} />
 
                     <Stack.Screen name="Mindfulness_1" component={Mindfulness_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Razum" component={Mindfulness_Razum} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Razum_1" component={Mindfulness_Razum_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Razum_2" component={Mindfulness_Razum_2} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Razum_3" component={Mindfulness_Razum_3} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Razum_4" component={Mindfulness_Razum_4} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Razum_5" component={Mindfulness_Razum_5} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Razum_6" component={Mindfulness_Razum_6} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Razum_7" component={Mindfulness_Razum_7} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto" component={Mindfulness_Skills_Chto} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen" component={Mindfulness_Skills_Chto_Seen} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen_1" component={Mindfulness_Skills_Chto_Seen_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen_2" component={Mindfulness_Skills_Chto_Seen_2} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen_3" component={Mindfulness_Skills_Chto_Seen_3} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen_4" component={Mindfulness_Skills_Chto_Seen_4} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen_5" component={Mindfulness_Skills_Chto_Seen_5} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen_6" component={Mindfulness_Skills_Chto_Seen_6} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen_7" component={Mindfulness_Skills_Chto_Seen_7} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Chto_Seen_8" component={Mindfulness_Skills_Chto_Seen_8} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Descript" component={Mindfulness_Skills_Descript} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Descript_1" component={Mindfulness_Skills_Descript_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Descript_2" component={Mindfulness_Skills_Descript_2} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Descript_3" component={Mindfulness_Skills_Descript_3} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Participation" component={Mindfulness_Skills_Participation} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Kak" component={Mindfulness_Skills_Kak} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Kak_1" component={Mindfulness_Skills_Kak_1} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Kak_2" component={Mindfulness_Skills_Kak_2} options={{ headerShown: false }} />
+                    <Stack.Screen name="Mindfulness_Skills_Kak_3" component={Mindfulness_Skills_Kak_3} options={{ headerShown: false }} />
 
                     <Stack.Screen name="Emotions_1" component={Emotions_1} options={{ headerShown: false }} />
                     <Stack.Screen name="Emotions_Facts" component={Emotions_Facts} options={{ headerShown: false }} />
