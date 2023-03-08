@@ -14,7 +14,7 @@ import SearchSvg from '../assets/SearchSvg';
 import ToggleSidebarSvg from '../assets/ToggleSidebarSvg';
 
 
-export const DefConatiner = ({ navigation, content, name }) => {
+export const DefConatiner = ({ navigation, content, name, hideSearch }) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const sidebarWidth = 200;
     const sidebarAnimation = new Animated.Value(isOpen ? 0 : -sidebarWidth);
@@ -70,8 +70,9 @@ export const DefConatiner = ({ navigation, content, name }) => {
                     <TouchableOpacity onPress={toggleSidebar} style={{}}>
                         <SvgXml xml={ToggleSidebarSvg} width="37" height="37" />
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate("HelpPlan")} style={{}}>
-                        <SvgXml xml={SearchSvg} width="30" height="30" />
+                    {hideSearch && <Text style={{fontSize: "20px", fontWeight: "600"}}>Поиск</Text>}
+                    <TouchableOpacity onPress={() => navigation.navigate("SearchScreen")} >
+                        <SvgXml style={hideSearch && {opacity: '0'}} xml={SearchSvg} width="30" height="30" />
                     </TouchableOpacity>
                 </View>
                 <Text style={{ width: "90%", fontSize: "20px", fontWeight: '600', marginBottom: "5%" }}>Привет, {defName}</Text>
