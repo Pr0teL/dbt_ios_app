@@ -14,6 +14,7 @@ import { Articles_1, Articles_BioSoc, Articles_DBT, Articles_Mission, Articles_P
 import { Skills_1, Skills_Chest, Skills_Drug, Skills_Poprosi, Skills_Valid } from './skillsScreens';
 import { HelpScreen } from './HelpScreen';
 import { SearchScreen } from './SearchScreen';
+import { CalendarScreen } from './CalendarScreen';
 
 
 const Stack = createStackNavigator();
@@ -51,6 +52,7 @@ export const Navigation = () => {
                     <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="HelpScreen" component={HelpScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="SearchScreen" component={SearchScreen} options={{ headerShown: false }} />
+                    <Stack.Screen name="CalendarScreen" component={CalendarScreen} options={{ headerShown: false }} />
 
                     <Stack.Screen name="Crisis_1" component={Crisis_1} options={{ headerShown: false }} />
                     <Stack.Screen name="Crisis_Stop" component={Crisis_Stop} options={{ headerShown: false }} />

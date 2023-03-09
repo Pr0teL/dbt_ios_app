@@ -48,6 +48,12 @@ export default function SideBar({ isSidebarOpen, toggleSidebar, sidebarAnimation
                 }}>
                     <Text style={{ fontSize: "20px", color: "#000", fontWeight: "600", marginLeft: "5%", marginBottom: "10%" }}>План безопасности</Text>
                 </TouchableOpacity>
+                <TouchableOpacity style={{borderBottomWidth: "2px", borderBottomColor: "#D9D9DA", width: "90%", marginBottom: "10%"}} onPress={() => {
+                    toggleSidebar()
+                    return navigation.navigate("CalendarScreen")
+                }}>
+                    <Text style={{ fontSize: "20px", color: "#000", fontWeight: "600", marginLeft: "5%", marginBottom: "10%" }}>Календарь Настроения</Text>
+                </TouchableOpacity>
                 <TouchableOpacity onPress={() => {
                     toggleSidebar()
                     return navigation.navigate("Menu")
