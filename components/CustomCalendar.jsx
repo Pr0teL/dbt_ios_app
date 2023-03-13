@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {LocaleConfig} from 'react-native-calendars';
+
 
 
 export default function CustomCalendar() {
     const [selected, setSelected] = useState([]);
+    const [day, setDay] = useState('');
+    const [openSelector, setOpenSelector] = useState(false);
+    const [selectMark, setSelectMark] = useState('');
 
     React.useEffect(() => {
         const loadData = async () => {
@@ -23,6 +28,28 @@ export default function CustomCalendar() {
         loadData();
     }, []);
 
+    LocaleConfig.locales['ru'] = {
+        monthNames: [
+          'Январь',
+          'Февраль',
+          'Март',
+          'Апрель',
+          'Май',
+          'Июнь',
+          'Июль',
+          'Август',
+          'Сентябрь',
+          'Октябрь',
+          'Ноябрь',
+          'Декабрь'
+        ],
+        monthNamesShort: ['Янв.', 'Фев.', 'Март', 'Апр.', 'Май', 'Июнь', 'Июль', 'Авг.', 'Сент.', 'Окт.', 'Нояб.', 'Дек.'],
+        dayNames: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+        dayNamesShort: ['Воскр.', 'Пон.', 'Втор.', 'Сред.', 'Четв.', 'Пятн.', 'Субб.'],
+        today: "Сегодня"
+      };
+      LocaleConfig.defaultLocale = 'ru';
+
 
 
     const saveData = async () => {
@@ -39,26 +66,52 @@ export default function CustomCalendar() {
         saveData()
      }, [selected]);
 
+     React.useEffect(() => {
+        if (selectMark !== '') {
+            setSelected([...selected, day.dateString + selectMark])
+            setOpenSelector(false)
+          console.log(`Выбрано значение: ${selectMark}`);
+          setSelectMark('')
+        }
+      }, [selectMark]);
+
 
     function handleDayPress(day) {
-        if(selected.includes(day.dateString+'😀')){
-            setSelected(selected.map((d) => d === day.dateString+'😀' ? day.dateString+'😑' : d))
-        }
-        else if(selected.includes(day.dateString+'😑')){
-            setSelected(selected.map((d) => d === day.dateString+'😑' ? day.dateString+'😞' : d))
-        }
-        else if(selected.includes(day.dateString+'😞')){
-            setSelected(selected.filter((d) => d !== day.dateString+'😞'))
-        }
-        else {
-            setSelected([...selected, day.dateString+'😀'])
-        }
+        setDay(day)
+        setOpenSelector(true)
+    }
+    function handleSelectMark(mark) {
+        setSelectMark(mark)
+    }
+
+    function findDate(date){
+        let res =''
+        selected.forEach((el) =>{ 
+            if(el.slice(0,10) === date){
+                res = el.slice(10)
+            }
+        })
+        return res
     }
 
 
     return (
         <View>
+            {openSelector && <>
+            <View style={{ width: "100%", height: '100%', position: "absolute", zIndex: "2" }}></View>
+            <View style={{ position: "absolute",zIndex: 2, backgroundColor: "#FFF", padding: "5%", borderRadius: "16px", width: "100%", marginTop: "36%"}}>
+                <Text style={{fontSize: '20px', marginBottom: "2%", textAlign: "center"}}>Как прошел выбранный день?</Text>
+                <View style={{flexDirection: "row", justifyContent: "space-around"}}>
+                    <TouchableOpacity onPress={() => handleSelectMark('😀')}><Text style={{fontSize: '45px'}}>😀</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleSelectMark('🙂')}><Text style={{fontSize: '45px'}}>🙂</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleSelectMark('😑')}><Text style={{fontSize: '45px'}}>😑</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleSelectMark('🙁')}><Text style={{fontSize: '45px'}}>🙁</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleSelectMark('😠')}><Text style={{fontSize: '45px'}}>😠</Text></TouchableOpacity>
+                </View>
+            </View>
+            </>}
             <Calendar
+            style={openSelector ? {opacity: "0.4"} : {opacity: "1"}}
                 theme={{
                     backgroundColor: '',
                     calendarBackground: '',
@@ -87,13 +140,15 @@ export default function CustomCalendar() {
                     [selected]: { selected: true, marked: true },
                 }}
                 dayComponent={({ date, state }) => {
+                    let mark = findDate(date.dateString)
                     return (
-                      <TouchableOpacity onPress={() => handleDayPress(date)} style={{}}>
+                      <TouchableOpacity onPress={() => {handleDayPress(date)}} style={{}}>
                         <Text style={{ fontSize: 18, textAlign: "center", color: state === 'disabled' ? 'gray' : state === 'today' ? 'red' :'black' }}>{date.day}</Text>
-                        {selected.includes(date.dateString+'😀') ? (
-                          <Text style={{ fontSize: 24 , textAlign: "center"}}>😀</Text>
-                        ) : selected.includes(date.dateString+'😑') ? <Text style={{ fontSize: 24 , textAlign: "center"}}>😑</Text> 
-                        : selected.includes(date.dateString+'😞') ? <Text style={{ fontSize: 24 , textAlign: "center"}}>😞</Text> : <Text style={{fontSize: 24 , textAlign: "center"}}>⚪</Text>}
+                        {
+                        mark ? (
+                          <Text style={{ fontSize: 24 , textAlign: "center"}}>{mark}</Text>
+                        )  : 
+                        <Text style={{fontSize: 24 , textAlign: "center"}}>⚪</Text>}
                       </TouchableOpacity>
                     );
                   }}
